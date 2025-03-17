@@ -1,0 +1,56 @@
+Module 4: Functions & Modules in Python
+
+Task 1: Calculate Factorial Using a Function 
+Problem Statement: Write a Python program that:
+1.   Defines a function named factorial that takes a number as an argument and calculates its factorial using a loop or recursion.
+2.   Returns the calculated factorial.
+3.   Calls the function with a sample number and prints the output.
+
+
+solution:  def factorial(n):
+             if n< 2:
+                return 1
+             else:
+                 return n *(factorial(n-1))
+    
+result = factorial(4)
+print(result)
+
+
+
+Task 2: Using the Math Module for Calculations
+ 
+Problem Statement: Write a Python program that:
+1.   Asks the user for a number as input.
+2.   Uses the math module to calculate the:
+o   Square root of the number
+o   Natural logarithm (log base e) of the number
+o   Sine of the number (in radians)
+3.   Displays the calculated results.
+
+solution:
+import math
+
+def main():
+    try:
+
+        num = float(input("Enter a number: "))
+        
+        if num < 0:
+            print("Error: Cannot calculate square root and logarithm of a negative number.")
+        else:
+            sqrt_value = math.sqrt(num)
+            log_value = math.log(num)
+            
+            print("Square root of {num}: {sqrt_value}")
+            print("Natural logarithm of {num}: {log_value}")
+        
+        sine_value = math.sin(num)
+        print("Sine of {num} (in radians): {sine_value}")
+    
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
+
+if __name__ == "__main__":
+    main()
+
